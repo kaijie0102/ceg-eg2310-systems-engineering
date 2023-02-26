@@ -1,0 +1,39 @@
+[0.033s] Invoking command in '/home/leow/colcon_ws/build/turtlebot3_gazebo': CMAKE_PREFIX_PATH=/home/leow/colcon_ws/install/py_pubsub:/home/leow/colcon_ws/install/auto_nav:/opt/ros/foxy /usr/bin/cmake /home/leow/colcon_ws/src/turtlebot3_simulations/turtlebot3_gazebo -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/leow/colcon_ws/install/turtlebot3_gazebo
+[0.392s] -- The C compiler identification is GNU 9.4.0
+[0.392s] -- The CXX compiler identification is GNU 9.4.0
+[0.392s] -- Check for working C compiler: /usr/bin/cc
+[0.393s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.393s] -- Detecting C compiler ABI info
+[0.393s] -- Detecting C compiler ABI info - done
+[0.393s] -- Detecting C compile features
+[0.393s] -- Detecting C compile features - done
+[0.393s] -- Check for working CXX compiler: /usr/bin/c++
+[0.411s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.412s] -- Detecting CXX compiler ABI info
+[0.487s] -- Detecting CXX compiler ABI info - done
+[0.500s] -- Detecting CXX compile features
+[0.500s] -- Detecting CXX compile features - done
+[0.506s] -- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.534s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.534s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.689s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.724s] CMake Error at CMakeLists.txt:23 (find_package):
+[0.724s]   By not providing "Findgazebo.cmake" in CMAKE_MODULE_PATH this project has
+[0.724s]   asked CMake to find a package configuration file provided by "gazebo", but
+[0.725s]   CMake did not find one.
+[0.725s] 
+[0.725s]   Could not find a package configuration file provided by "gazebo" with any
+[0.725s]   of the following names:
+[0.725s] 
+[0.725s]     gazeboConfig.cmake
+[0.725s]     gazebo-config.cmake
+[0.725s] 
+[0.726s]   Add the installation prefix of "gazebo" to CMAKE_PREFIX_PATH or set
+[0.726s]   "gazebo_DIR" to a directory containing one of the above files.  If "gazebo"
+[0.726s]   provides a separate development package or SDK, be sure it has been
+[0.726s]   installed.
+[0.726s] 
+[0.726s] 
+[0.726s] -- Configuring incomplete, errors occurred!
+[0.726s] See also "/home/leow/colcon_ws/build/turtlebot3_gazebo/CMakeFiles/CMakeOutput.log".
+[0.731s] Invoked command in '/home/leow/colcon_ws/build/turtlebot3_gazebo' returned '1': CMAKE_PREFIX_PATH=/home/leow/colcon_ws/install/py_pubsub:/home/leow/colcon_ws/install/auto_nav:/opt/ros/foxy /usr/bin/cmake /home/leow/colcon_ws/src/turtlebot3_simulations/turtlebot3_gazebo -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/leow/colcon_ws/install/turtlebot3_gazebo

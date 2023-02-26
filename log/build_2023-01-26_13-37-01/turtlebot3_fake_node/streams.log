@@ -1,0 +1,5 @@
+[0.037s] Invoking command in '/home/leow/colcon_ws/build/turtlebot3_fake_node': CMAKE_PREFIX_PATH=/home/leow/colcon_ws/install/py_pubsub:/home/leow/colcon_ws/install/auto_nav:/opt/ros/foxy /usr/bin/cmake --build /home/leow/colcon_ws/build/turtlebot3_fake_node -- -j20 -l20
+[0.227s] [35m[1mScanning dependencies of target turtlebot3_fake_node[0m
+[0.227s] [ 50%] [32mBuilding CXX object CMakeFiles/turtlebot3_fake_node.dir/src/turtlebot3_fake_node.cpp.o[0m
+[4.203s] [100%] [32m[1mLinking CXX executable turtlebot3_fake_node[0m
+[4.436s] [100%] Built target turtlebot3_fake_node

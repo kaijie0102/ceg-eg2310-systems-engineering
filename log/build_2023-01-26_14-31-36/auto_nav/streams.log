@@ -1,0 +1,26 @@
+[0.549s] Invoking command in '/home/leow/colcon_ws/src/auto_nav': PYTHONPATH=/home/leow/colcon_ws/build/auto_nav/prefix_override:/home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/auto_nav build --build-base /home/leow/colcon_ws/build/auto_nav/build install --record /home/leow/colcon_ws/build/auto_nav/install.log --install-scripts $base/lib/auto_nav --single-version-externally-managed
+[0.670s] running egg_info
+[0.670s] writing ../../build/auto_nav/auto_nav.egg-info/PKG-INFO
+[0.671s] writing dependency_links to ../../build/auto_nav/auto_nav.egg-info/dependency_links.txt
+[0.671s] writing entry points to ../../build/auto_nav/auto_nav.egg-info/entry_points.txt
+[0.671s] writing requirements to ../../build/auto_nav/auto_nav.egg-info/requires.txt
+[0.671s] writing top-level names to ../../build/auto_nav/auto_nav.egg-info/top_level.txt
+[0.692s] reading manifest file '../../build/auto_nav/auto_nav.egg-info/SOURCES.txt'
+[0.692s] writing manifest file '../../build/auto_nav/auto_nav.egg-info/SOURCES.txt'
+[0.693s] running build
+[0.693s] running build_py
+[0.693s] running install
+[0.693s] running install_lib
+[0.694s] running install_data
+[0.695s] running install_egg_info
+[0.696s] removing '/home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages/auto_nav-0.0.0-py3.8.egg-info' (and everything under it)
+[0.696s] Copying ../../build/auto_nav/auto_nav.egg-info to /home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages/auto_nav-0.0.0-py3.8.egg-info
+[0.696s] running install_scripts
+[0.707s] Installing r2auto_nav script to /home/leow/colcon_ws/install/auto_nav/lib/auto_nav
+[0.707s] Installing r2mover script to /home/leow/colcon_ws/install/auto_nav/lib/auto_nav
+[0.708s] Installing r2moverotate script to /home/leow/colcon_ws/install/auto_nav/lib/auto_nav
+[0.708s] Installing r2occupancy script to /home/leow/colcon_ws/install/auto_nav/lib/auto_nav
+[0.708s] Installing r2occupancy2 script to /home/leow/colcon_ws/install/auto_nav/lib/auto_nav
+[0.708s] Installing r2scanner script to /home/leow/colcon_ws/install/auto_nav/lib/auto_nav
+[0.708s] writing list of installed files to '/home/leow/colcon_ws/build/auto_nav/install.log'
+[0.727s] Invoked command in '/home/leow/colcon_ws/src/auto_nav' returned '0': PYTHONPATH=/home/leow/colcon_ws/build/auto_nav/prefix_override:/home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/auto_nav build --build-base /home/leow/colcon_ws/build/auto_nav/build install --record /home/leow/colcon_ws/build/auto_nav/install.log --install-scripts $base/lib/auto_nav --single-version-externally-managed

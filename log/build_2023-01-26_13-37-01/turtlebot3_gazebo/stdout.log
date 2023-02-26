@@ -1,0 +1,5 @@
+-- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Configuring incomplete, errors occurred!
+See also "/home/leow/colcon_ws/build/turtlebot3_gazebo/CMakeFiles/CMakeOutput.log".

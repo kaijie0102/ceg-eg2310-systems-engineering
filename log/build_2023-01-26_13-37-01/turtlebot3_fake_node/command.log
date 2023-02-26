@@ -1,0 +1,1 @@
+Invoking command in '/home/leow/colcon_ws/build/turtlebot3_fake_node': CMAKE_PREFIX_PATH=/home/leow/colcon_ws/install/py_pubsub:/home/leow/colcon_ws/install/auto_nav:/opt/ros/foxy /usr/bin/cmake --build /home/leow/colcon_ws/build/turtlebot3_fake_node -- -j20 -l20

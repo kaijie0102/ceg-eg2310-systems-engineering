@@ -1,0 +1,18 @@
+[0.688s] Invoking command in '/home/leow/colcon_ws/build/py_pubsub': PYTHONPATH=/home/leow/colcon_ws/build/py_pubsub/prefix_override:/home/leow/colcon_ws/install/py_pubsub/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/leow/colcon_ws/build/py_pubsub/build --no-deps install_data
+[0.823s] running develop
+[0.888s] running egg_info
+[0.888s] writing py_pubsub.egg-info/PKG-INFO
+[0.888s] writing dependency_links to py_pubsub.egg-info/dependency_links.txt
+[0.889s] writing entry points to py_pubsub.egg-info/entry_points.txt
+[0.889s] writing requirements to py_pubsub.egg-info/requires.txt
+[0.889s] writing top-level names to py_pubsub.egg-info/top_level.txt
+[0.909s] reading manifest file 'py_pubsub.egg-info/SOURCES.txt'
+[0.909s] writing manifest file 'py_pubsub.egg-info/SOURCES.txt'
+[0.929s] running build_ext
+[0.929s] Creating /home/leow/colcon_ws/install/py_pubsub/lib/python3.8/site-packages/py-pubsub.egg-link (link to .)
+[0.929s] Installing listener script to /home/leow/colcon_ws/install/py_pubsub/lib/py_pubsub
+[0.929s] Installing talker script to /home/leow/colcon_ws/install/py_pubsub/lib/py_pubsub
+[0.929s] 
+[0.929s] Installed /home/leow/colcon_ws/build/py_pubsub
+[0.929s] running install_data
+[0.960s] Invoked command in '/home/leow/colcon_ws/build/py_pubsub' returned '0': PYTHONPATH=/home/leow/colcon_ws/build/py_pubsub/prefix_override:/home/leow/colcon_ws/install/py_pubsub/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/leow/colcon_ws/build/py_pubsub/build --no-deps install_data

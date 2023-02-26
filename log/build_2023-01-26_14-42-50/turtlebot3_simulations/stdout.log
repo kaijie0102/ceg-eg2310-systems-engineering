@@ -1,0 +1,23 @@
+-- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/leow/colcon_ws/build/turtlebot3_simulations
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/leow/colcon_ws/install/turtlebot3_simulations/share/ament_index/resource_index/package_run_dependencies/turtlebot3_simulations
+-- Symlinking: /home/leow/colcon_ws/install/turtlebot3_simulations/share/ament_index/resource_index/parent_prefix_path/turtlebot3_simulations
+-- Symlinking: /home/leow/colcon_ws/install/turtlebot3_simulations/share/turtlebot3_simulations/environment/ament_prefix_path.sh
+-- Symlinking: /home/leow/colcon_ws/install/turtlebot3_simulations/share/turtlebot3_simulations/environment/ament_prefix_path.dsv
+-- Symlinking: /home/leow/colcon_ws/install/turtlebot3_simulations/share/turtlebot3_simulations/environment/path.sh
+-- Symlinking: /home/leow/colcon_ws/install/turtlebot3_simulations/share/turtlebot3_simulations/environment/path.dsv
+-- Symlinking: /home/leow/colcon_ws/install/turtlebot3_simulations/share/turtlebot3_simulations/local_setup.bash
+-- Symlinking: /home/leow/colcon_ws/install/turtlebot3_simulations/share/turtlebot3_simulations/local_setup.sh
+-- Symlinking: /home/leow/colcon_ws/install/turtlebot3_simulations/share/turtlebot3_simulations/local_setup.zsh
+-- Symlinking: /home/leow/colcon_ws/install/turtlebot3_simulations/share/turtlebot3_simulations/local_setup.dsv
+-- Symlinking: /home/leow/colcon_ws/install/turtlebot3_simulations/share/turtlebot3_simulations/package.dsv
+-- Symlinking: /home/leow/colcon_ws/install/turtlebot3_simulations/share/ament_index/resource_index/packages/turtlebot3_simulations
+-- Symlinking: /home/leow/colcon_ws/install/turtlebot3_simulations/share/turtlebot3_simulations/cmake/turtlebot3_simulationsConfig.cmake
+-- Symlinking: /home/leow/colcon_ws/install/turtlebot3_simulations/share/turtlebot3_simulations/cmake/turtlebot3_simulationsConfig-version.cmake
+-- Symlinking: /home/leow/colcon_ws/install/turtlebot3_simulations/share/turtlebot3_simulations/package.xml

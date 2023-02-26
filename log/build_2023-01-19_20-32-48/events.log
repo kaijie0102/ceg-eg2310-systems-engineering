@@ -1,0 +1,72 @@
+[0.000000] (-) TimerEvent: {}
+[0.000367] (-) JobUnselected: {'identifier': 'py_pubsub'}
+[0.000389] (auto_nav) JobQueued: {'identifier': 'auto_nav', 'dependencies': OrderedDict()}
+[0.000403] (auto_nav) JobStarted: {'identifier': 'auto_nav'}
+[0.099758] (-) TimerEvent: {}
+[0.200108] (-) TimerEvent: {}
+[0.300460] (-) TimerEvent: {}
+[0.400701] (-) TimerEvent: {}
+[0.418702] (auto_nav) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/auto_nav', 'build', '--build-base', '/home/leow/colcon_ws/build/auto_nav/build', 'install', '--record', '/home/leow/colcon_ws/build/auto_nav/install.log', '--install-scripts', '$base/lib/auto_nav', '--single-version-externally-managed'], 'cwd': '/home/leow/colcon_ws/src/auto_nav', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'leow', 'SSH_AGENT_PID': '1453', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib', 'HOME': '/home/leow', 'OLDPWD': '/home/leow/colcon_ws/src/auto_nav', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '1100', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/leow/colcon_ws/install', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'leow', 'JOURNAL_STREAM': '8:53481', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'leow', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/leow-XPS-15-9520:@/tmp/.ICE-unix/1504,unix/leow-XPS-15-9520:/tmp/.ICE-unix/1504', 'INVOCATION_ID': '2734e79a3ad1417c823896efed2cde65', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/200c7a03_cc00_4f72_a4c4_df52fa323da4', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.158', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '38', 'AMENT_PREFIX_PATH': '/home/leow/colcon_ws/install/py_pubsub:/opt/ros/foxy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/leow/colcon_ws/build/auto_nav', 'TURTLEBOT3_MODEL': 'burger', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/leow/colcon_ws/build/auto_nav/prefix_override:/home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages:/home/leow/colcon_ws/install/py_pubsub/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'COLCON': '1', 'VTE_VERSION': '6003'}, 'shell': False}
+[0.500854] (-) TimerEvent: {}
+[0.532890] (auto_nav) StdoutLine: {'line': b'running egg_info\n'}
+[0.533180] (auto_nav) StdoutLine: {'line': b'creating ../../build/auto_nav/auto_nav.egg-info\n'}
+[0.533235] (auto_nav) StdoutLine: {'line': b'writing ../../build/auto_nav/auto_nav.egg-info/PKG-INFO\n'}
+[0.533371] (auto_nav) StdoutLine: {'line': b'writing dependency_links to ../../build/auto_nav/auto_nav.egg-info/dependency_links.txt\n'}
+[0.533449] (auto_nav) StdoutLine: {'line': b'writing entry points to ../../build/auto_nav/auto_nav.egg-info/entry_points.txt\n'}
+[0.533486] (auto_nav) StdoutLine: {'line': b'writing requirements to ../../build/auto_nav/auto_nav.egg-info/requires.txt\n'}
+[0.533517] (auto_nav) StdoutLine: {'line': b'writing top-level names to ../../build/auto_nav/auto_nav.egg-info/top_level.txt\n'}
+[0.549940] (auto_nav) StdoutLine: {'line': b"writing manifest file '../../build/auto_nav/auto_nav.egg-info/SOURCES.txt'\n"}
+[0.570783] (auto_nav) StdoutLine: {'line': b"reading manifest file '../../build/auto_nav/auto_nav.egg-info/SOURCES.txt'\n"}
+[0.571163] (auto_nav) StdoutLine: {'line': b"writing manifest file '../../build/auto_nav/auto_nav.egg-info/SOURCES.txt'\n"}
+[0.571246] (auto_nav) StdoutLine: {'line': b'running build\n'}
+[0.571284] (auto_nav) StdoutLine: {'line': b'running build_py\n'}
+[0.571318] (auto_nav) StdoutLine: {'line': b'creating /home/leow/colcon_ws/build/auto_nav/build\n'}
+[0.571351] (auto_nav) StdoutLine: {'line': b'creating /home/leow/colcon_ws/build/auto_nav/build/lib\n'}
+[0.571382] (auto_nav) StdoutLine: {'line': b'creating /home/leow/colcon_ws/build/auto_nav/build/lib/auto_nav\n'}
+[0.571559] (auto_nav) StdoutLine: {'line': b'copying auto_nav/r2moverotate.py -> /home/leow/colcon_ws/build/auto_nav/build/lib/auto_nav\n'}
+[0.571637] (auto_nav) StdoutLine: {'line': b'copying auto_nav/r2scanner.py -> /home/leow/colcon_ws/build/auto_nav/build/lib/auto_nav\n'}
+[0.571765] (auto_nav) StdoutLine: {'line': b'copying auto_nav/__init__.py -> /home/leow/colcon_ws/build/auto_nav/build/lib/auto_nav\n'}
+[0.571842] (auto_nav) StdoutLine: {'line': b'copying auto_nav/r2mover.py -> /home/leow/colcon_ws/build/auto_nav/build/lib/auto_nav\n'}
+[0.571993] (auto_nav) StdoutLine: {'line': b'copying auto_nav/setup.py -> /home/leow/colcon_ws/build/auto_nav/build/lib/auto_nav\n'}
+[0.572071] (auto_nav) StdoutLine: {'line': b'copying auto_nav/r2occupancy2.py -> /home/leow/colcon_ws/build/auto_nav/build/lib/auto_nav\n'}
+[0.572207] (auto_nav) StdoutLine: {'line': b'copying auto_nav/r2occupancy.py -> /home/leow/colcon_ws/build/auto_nav/build/lib/auto_nav\n'}
+[0.572590] (auto_nav) StdoutLine: {'line': b'copying auto_nav/r2auto_nav.py -> /home/leow/colcon_ws/build/auto_nav/build/lib/auto_nav\n'}
+[0.572987] (auto_nav) StdoutLine: {'line': b'running install\n'}
+[0.573624] (auto_nav) StdoutLine: {'line': b'running install_lib\n'}
+[0.574144] (auto_nav) StdoutLine: {'line': b'creating /home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages/auto_nav\n'}
+[0.574322] (auto_nav) StdoutLine: {'line': b'copying /home/leow/colcon_ws/build/auto_nav/build/lib/auto_nav/r2moverotate.py -> /home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages/auto_nav\n'}
+[0.574366] (auto_nav) StdoutLine: {'line': b'copying /home/leow/colcon_ws/build/auto_nav/build/lib/auto_nav/r2scanner.py -> /home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages/auto_nav\n'}
+[0.574401] (auto_nav) StdoutLine: {'line': b'copying /home/leow/colcon_ws/build/auto_nav/build/lib/auto_nav/__init__.py -> /home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages/auto_nav\n'}
+[0.574438] (auto_nav) StdoutLine: {'line': b'copying /home/leow/colcon_ws/build/auto_nav/build/lib/auto_nav/r2mover.py -> /home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages/auto_nav\n'}
+[0.574473] (auto_nav) StdoutLine: {'line': b'copying /home/leow/colcon_ws/build/auto_nav/build/lib/auto_nav/setup.py -> /home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages/auto_nav\n'}
+[0.574506] (auto_nav) StdoutLine: {'line': b'copying /home/leow/colcon_ws/build/auto_nav/build/lib/auto_nav/r2occupancy2.py -> /home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages/auto_nav\n'}
+[0.574539] (auto_nav) StdoutLine: {'line': b'copying /home/leow/colcon_ws/build/auto_nav/build/lib/auto_nav/r2occupancy.py -> /home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages/auto_nav\n'}
+[0.574574] (auto_nav) StdoutLine: {'line': b'copying /home/leow/colcon_ws/build/auto_nav/build/lib/auto_nav/r2auto_nav.py -> /home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages/auto_nav\n'}
+[0.574632] (auto_nav) StdoutLine: {'line': b'byte-compiling /home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages/auto_nav/r2moverotate.py to r2moverotate.cpython-38.pyc\n'}
+[0.575751] (auto_nav) StdoutLine: {'line': b'byte-compiling /home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages/auto_nav/r2scanner.py to r2scanner.cpython-38.pyc\n'}
+[0.575925] (auto_nav) StdoutLine: {'line': b'byte-compiling /home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages/auto_nav/__init__.py to __init__.cpython-38.pyc\n'}
+[0.575986] (auto_nav) StdoutLine: {'line': b'byte-compiling /home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages/auto_nav/r2mover.py to r2mover.cpython-38.pyc\n'}
+[0.576242] (auto_nav) StdoutLine: {'line': b'byte-compiling /home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages/auto_nav/setup.py to setup.cpython-38.pyc\n'}
+[0.576377] (auto_nav) StdoutLine: {'line': b'byte-compiling /home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages/auto_nav/r2occupancy2.py to r2occupancy2.cpython-38.pyc\n'}
+[0.577013] (auto_nav) StdoutLine: {'line': b'byte-compiling /home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages/auto_nav/r2occupancy.py to r2occupancy.cpython-38.pyc\n'}
+[0.577186] (auto_nav) StdoutLine: {'line': b'byte-compiling /home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages/auto_nav/r2auto_nav.py to r2auto_nav.cpython-38.pyc\n'}
+[0.577929] (auto_nav) StdoutLine: {'line': b'running install_data\n'}
+[0.578130] (auto_nav) StdoutLine: {'line': b'creating /home/leow/colcon_ws/install/auto_nav/share/ament_index\n'}
+[0.578203] (auto_nav) StdoutLine: {'line': b'creating /home/leow/colcon_ws/install/auto_nav/share/ament_index/resource_index\n'}
+[0.578253] (auto_nav) StdoutLine: {'line': b'creating /home/leow/colcon_ws/install/auto_nav/share/ament_index/resource_index/packages\n'}
+[0.578288] (auto_nav) StdoutLine: {'line': b'copying resource/auto_nav -> /home/leow/colcon_ws/install/auto_nav/share/ament_index/resource_index/packages\n'}
+[0.578321] (auto_nav) StdoutLine: {'line': b'copying package.xml -> /home/leow/colcon_ws/install/auto_nav/share/auto_nav\n'}
+[0.578375] (auto_nav) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.579275] (auto_nav) StdoutLine: {'line': b'Copying ../../build/auto_nav/auto_nav.egg-info to /home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages/auto_nav-0.0.0-py3.8.egg-info\n'}
+[0.579532] (auto_nav) StdoutLine: {'line': b'running install_scripts\n'}
+[0.590371] (auto_nav) StdoutLine: {'line': b'Installing r2auto_nav script to /home/leow/colcon_ws/install/auto_nav/lib/auto_nav\n'}
+[0.590432] (auto_nav) StdoutLine: {'line': b'Installing r2mover script to /home/leow/colcon_ws/install/auto_nav/lib/auto_nav\n'}
+[0.590466] (auto_nav) StdoutLine: {'line': b'Installing r2moverotate script to /home/leow/colcon_ws/install/auto_nav/lib/auto_nav\n'}
+[0.590500] (auto_nav) StdoutLine: {'line': b'Installing r2occupancy script to /home/leow/colcon_ws/install/auto_nav/lib/auto_nav\n'}
+[0.590536] (auto_nav) StdoutLine: {'line': b'Installing r2occupancy2 script to /home/leow/colcon_ws/install/auto_nav/lib/auto_nav\n'}
+[0.590570] (auto_nav) StdoutLine: {'line': b'Installing r2scanner script to /home/leow/colcon_ws/install/auto_nav/lib/auto_nav\n'}
+[0.590637] (auto_nav) StdoutLine: {'line': b"writing list of installed files to '/home/leow/colcon_ws/build/auto_nav/install.log'\n"}
+[0.600949] (-) TimerEvent: {}
+[0.602848] (auto_nav) CommandEnded: {'returncode': 0}
+[0.620566] (auto_nav) JobEnded: {'identifier': 'auto_nav', 'rc': 0}
+[0.620899] (-) EventReactorShutdown: {}

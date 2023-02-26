@@ -1,0 +1,3 @@
+[console_scripts]
+load_map = map_loader.load_map:generate_launch_description
+

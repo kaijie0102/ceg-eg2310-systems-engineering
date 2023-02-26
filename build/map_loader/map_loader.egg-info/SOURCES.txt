@@ -1,0 +1,12 @@
+package.xml
+setup.cfg
+setup.py
+map_loader/__init__.py
+map_loader.egg-info/PKG-INFO
+map_loader.egg-info/SOURCES.txt
+map_loader.egg-info/dependency_links.txt
+map_loader.egg-info/entry_points.txt
+map_loader.egg-info/requires.txt
+map_loader.egg-info/top_level.txt
+map_loader.egg-info/zip-safe
+resource/map_loader

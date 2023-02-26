@@ -1,0 +1,22 @@
+[1.003s] Invoking command in '/home/leow/colcon_ws/build/auto_nav': PYTHONPATH=/home/leow/colcon_ws/build/auto_nav/prefix_override:/home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/leow/colcon_ws/build/auto_nav/build --no-deps install_data
+[1.256s] running develop
+[1.410s] running egg_info
+[1.411s] writing auto_nav.egg-info/PKG-INFO
+[1.411s] writing dependency_links to auto_nav.egg-info/dependency_links.txt
+[1.411s] writing entry points to auto_nav.egg-info/entry_points.txt
+[1.411s] writing requirements to auto_nav.egg-info/requires.txt
+[1.411s] writing top-level names to auto_nav.egg-info/top_level.txt
+[1.449s] reading manifest file 'auto_nav.egg-info/SOURCES.txt'
+[1.450s] writing manifest file 'auto_nav.egg-info/SOURCES.txt'
+[1.488s] running build_ext
+[1.489s] Creating /home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages/auto-nav.egg-link (link to .)
+[1.490s] Installing r2auto_nav script to /home/leow/colcon_ws/install/auto_nav/lib/auto_nav
+[1.491s] Installing r2mover script to /home/leow/colcon_ws/install/auto_nav/lib/auto_nav
+[1.491s] Installing r2moverotate script to /home/leow/colcon_ws/install/auto_nav/lib/auto_nav
+[1.491s] Installing r2occupancy script to /home/leow/colcon_ws/install/auto_nav/lib/auto_nav
+[1.491s] Installing r2occupancy2 script to /home/leow/colcon_ws/install/auto_nav/lib/auto_nav
+[1.491s] Installing r2scanner script to /home/leow/colcon_ws/install/auto_nav/lib/auto_nav
+[1.492s] 
+[1.492s] Installed /home/leow/colcon_ws/build/auto_nav
+[1.492s] running install_data
+[1.546s] Invoked command in '/home/leow/colcon_ws/build/auto_nav' returned '0': PYTHONPATH=/home/leow/colcon_ws/build/auto_nav/prefix_override:/home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/leow/colcon_ws/build/auto_nav/build --no-deps install_data

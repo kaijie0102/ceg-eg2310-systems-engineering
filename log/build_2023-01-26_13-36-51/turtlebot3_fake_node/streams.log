@@ -1,0 +1,45 @@
+[0.036s] Invoking command in '/home/leow/colcon_ws/build/turtlebot3_fake_node': CMAKE_PREFIX_PATH=/home/leow/colcon_ws/install/py_pubsub:/home/leow/colcon_ws/install/auto_nav:/opt/ros/foxy /usr/bin/cmake /home/leow/colcon_ws/src/turtlebot3_simulations/turtlebot3_fake_node -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/leow/colcon_ws/install/turtlebot3_fake_node
+[0.405s] -- The C compiler identification is GNU 9.4.0
+[0.405s] -- The CXX compiler identification is GNU 9.4.0
+[0.405s] -- Check for working C compiler: /usr/bin/cc
+[0.406s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.406s] -- Detecting C compiler ABI info
+[0.406s] -- Detecting C compiler ABI info - done
+[0.406s] -- Detecting C compile features
+[0.406s] -- Detecting C compile features - done
+[0.407s] -- Check for working CXX compiler: /usr/bin/c++
+[0.424s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.425s] -- Detecting CXX compiler ABI info
+[0.499s] -- Detecting CXX compiler ABI info - done
+[0.512s] -- Detecting CXX compile features
+[0.512s] -- Detecting CXX compile features - done
+[0.518s] -- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.546s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.546s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.699s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.728s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[0.765s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.772s] -- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.866s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[0.887s] -- Found FastRTPS: /opt/ros/foxy/include  
+[0.956s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.030s] -- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)
+[1.089s] -- Found rclcpp: 2.4.2 (/opt/ros/foxy/share/rclcpp/cmake)
+[1.133s] -- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.135s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.136s] -- Looking for pthread.h
+[1.200s] -- Looking for pthread.h - found
+[1.201s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.276s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[1.276s] -- Looking for pthread_create in pthreads
+[1.326s] -- Looking for pthread_create in pthreads - not found
+[1.327s] -- Looking for pthread_create in pthread
+[1.398s] -- Looking for pthread_create in pthread - found
+[1.399s] -- Found Threads: TRUE  
+[1.514s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[1.570s] -- Found tf2: 0.13.13 (/opt/ros/foxy/share/tf2/cmake)
+[1.581s] -- Found tf2_msgs: 0.13.13 (/opt/ros/foxy/share/tf2_msgs/cmake)
+[1.724s] -- Found turtlebot3_msgs: 2.2.1 (/opt/ros/foxy/share/turtlebot3_msgs/cmake)
+[1.841s] -- Configuring done
+[1.848s] -- Generating done
+[1.849s] -- Build files have been written to: /home/leow/colcon_ws/build/turtlebot3_fake_node

@@ -1,0 +1,22 @@
+running develop
+running egg_info
+creating map_loader.egg-info
+writing map_loader.egg-info/PKG-INFO
+writing dependency_links to map_loader.egg-info/dependency_links.txt
+writing entry points to map_loader.egg-info/entry_points.txt
+writing requirements to map_loader.egg-info/requires.txt
+writing top-level names to map_loader.egg-info/top_level.txt
+writing manifest file 'map_loader.egg-info/SOURCES.txt'
+reading manifest file 'map_loader.egg-info/SOURCES.txt'
+writing manifest file 'map_loader.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/leow/colcon_ws/install/map_loader/lib/python3.8/site-packages/site.py
+Creating /home/leow/colcon_ws/install/map_loader/lib/python3.8/site-packages/map-loader.egg-link (link to .)
+
+Installed /home/leow/colcon_ws/build/map_loader
+running install_data
+creating /home/leow/colcon_ws/install/map_loader/share/ament_index
+creating /home/leow/colcon_ws/install/map_loader/share/ament_index/resource_index
+creating /home/leow/colcon_ws/install/map_loader/share/ament_index/resource_index/packages
+copying resource/map_loader -> /home/leow/colcon_ws/install/map_loader/share/ament_index/resource_index/packages
+copying package.xml -> /home/leow/colcon_ws/install/map_loader/share/map_loader

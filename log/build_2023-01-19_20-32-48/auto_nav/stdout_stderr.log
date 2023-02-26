@@ -1,0 +1,58 @@
+running egg_info
+creating ../../build/auto_nav/auto_nav.egg-info
+writing ../../build/auto_nav/auto_nav.egg-info/PKG-INFO
+writing dependency_links to ../../build/auto_nav/auto_nav.egg-info/dependency_links.txt
+writing entry points to ../../build/auto_nav/auto_nav.egg-info/entry_points.txt
+writing requirements to ../../build/auto_nav/auto_nav.egg-info/requires.txt
+writing top-level names to ../../build/auto_nav/auto_nav.egg-info/top_level.txt
+writing manifest file '../../build/auto_nav/auto_nav.egg-info/SOURCES.txt'
+reading manifest file '../../build/auto_nav/auto_nav.egg-info/SOURCES.txt'
+writing manifest file '../../build/auto_nav/auto_nav.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/leow/colcon_ws/build/auto_nav/build
+creating /home/leow/colcon_ws/build/auto_nav/build/lib
+creating /home/leow/colcon_ws/build/auto_nav/build/lib/auto_nav
+copying auto_nav/r2moverotate.py -> /home/leow/colcon_ws/build/auto_nav/build/lib/auto_nav
+copying auto_nav/r2scanner.py -> /home/leow/colcon_ws/build/auto_nav/build/lib/auto_nav
+copying auto_nav/__init__.py -> /home/leow/colcon_ws/build/auto_nav/build/lib/auto_nav
+copying auto_nav/r2mover.py -> /home/leow/colcon_ws/build/auto_nav/build/lib/auto_nav
+copying auto_nav/setup.py -> /home/leow/colcon_ws/build/auto_nav/build/lib/auto_nav
+copying auto_nav/r2occupancy2.py -> /home/leow/colcon_ws/build/auto_nav/build/lib/auto_nav
+copying auto_nav/r2occupancy.py -> /home/leow/colcon_ws/build/auto_nav/build/lib/auto_nav
+copying auto_nav/r2auto_nav.py -> /home/leow/colcon_ws/build/auto_nav/build/lib/auto_nav
+running install
+running install_lib
+creating /home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages/auto_nav
+copying /home/leow/colcon_ws/build/auto_nav/build/lib/auto_nav/r2moverotate.py -> /home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages/auto_nav
+copying /home/leow/colcon_ws/build/auto_nav/build/lib/auto_nav/r2scanner.py -> /home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages/auto_nav
+copying /home/leow/colcon_ws/build/auto_nav/build/lib/auto_nav/__init__.py -> /home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages/auto_nav
+copying /home/leow/colcon_ws/build/auto_nav/build/lib/auto_nav/r2mover.py -> /home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages/auto_nav
+copying /home/leow/colcon_ws/build/auto_nav/build/lib/auto_nav/setup.py -> /home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages/auto_nav
+copying /home/leow/colcon_ws/build/auto_nav/build/lib/auto_nav/r2occupancy2.py -> /home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages/auto_nav
+copying /home/leow/colcon_ws/build/auto_nav/build/lib/auto_nav/r2occupancy.py -> /home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages/auto_nav
+copying /home/leow/colcon_ws/build/auto_nav/build/lib/auto_nav/r2auto_nav.py -> /home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages/auto_nav
+byte-compiling /home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages/auto_nav/r2moverotate.py to r2moverotate.cpython-38.pyc
+byte-compiling /home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages/auto_nav/r2scanner.py to r2scanner.cpython-38.pyc
+byte-compiling /home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages/auto_nav/__init__.py to __init__.cpython-38.pyc
+byte-compiling /home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages/auto_nav/r2mover.py to r2mover.cpython-38.pyc
+byte-compiling /home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages/auto_nav/setup.py to setup.cpython-38.pyc
+byte-compiling /home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages/auto_nav/r2occupancy2.py to r2occupancy2.cpython-38.pyc
+byte-compiling /home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages/auto_nav/r2occupancy.py to r2occupancy.cpython-38.pyc
+byte-compiling /home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages/auto_nav/r2auto_nav.py to r2auto_nav.cpython-38.pyc
+running install_data
+creating /home/leow/colcon_ws/install/auto_nav/share/ament_index
+creating /home/leow/colcon_ws/install/auto_nav/share/ament_index/resource_index
+creating /home/leow/colcon_ws/install/auto_nav/share/ament_index/resource_index/packages
+copying resource/auto_nav -> /home/leow/colcon_ws/install/auto_nav/share/ament_index/resource_index/packages
+copying package.xml -> /home/leow/colcon_ws/install/auto_nav/share/auto_nav
+running install_egg_info
+Copying ../../build/auto_nav/auto_nav.egg-info to /home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages/auto_nav-0.0.0-py3.8.egg-info
+running install_scripts
+Installing r2auto_nav script to /home/leow/colcon_ws/install/auto_nav/lib/auto_nav
+Installing r2mover script to /home/leow/colcon_ws/install/auto_nav/lib/auto_nav
+Installing r2moverotate script to /home/leow/colcon_ws/install/auto_nav/lib/auto_nav
+Installing r2occupancy script to /home/leow/colcon_ws/install/auto_nav/lib/auto_nav
+Installing r2occupancy2 script to /home/leow/colcon_ws/install/auto_nav/lib/auto_nav
+Installing r2scanner script to /home/leow/colcon_ws/install/auto_nav/lib/auto_nav
+writing list of installed files to '/home/leow/colcon_ws/build/auto_nav/install.log'
