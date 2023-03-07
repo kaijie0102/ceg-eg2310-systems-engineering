@@ -1,0 +1,21 @@
+[0.010s] Invoking command in '/home/leow/colcon_ws/build/turtlebot3_simulations': CMAKE_PREFIX_PATH=/home/leow/colcon_ws/install/turtlebot3_gazebo:/home/leow/colcon_ws/install/turtlebot3_fake_node:/home/leow/colcon_ws/install/turtlebot3_simulations:/home/leow/colcon_ws/install/py_pubsub:/home/leow/colcon_ws/install/map_loader:/home/leow/colcon_ws/install/auto_nav:/opt/ros/foxy /usr/bin/cmake --build /home/leow/colcon_ws/build/turtlebot3_simulations -- -j20 -l20
+[0.040s] Invoked command in '/home/leow/colcon_ws/build/turtlebot3_simulations' returned '0': CMAKE_PREFIX_PATH=/home/leow/colcon_ws/install/turtlebot3_gazebo:/home/leow/colcon_ws/install/turtlebot3_fake_node:/home/leow/colcon_ws/install/turtlebot3_simulations:/home/leow/colcon_ws/install/py_pubsub:/home/leow/colcon_ws/install/map_loader:/home/leow/colcon_ws/install/auto_nav:/opt/ros/foxy /usr/bin/cmake --build /home/leow/colcon_ws/build/turtlebot3_simulations -- -j20 -l20
+[0.057s] Invoking command in '/home/leow/colcon_ws/build/turtlebot3_simulations': CMAKE_PREFIX_PATH=/home/leow/colcon_ws/install/turtlebot3_gazebo:/home/leow/colcon_ws/install/turtlebot3_fake_node:/home/leow/colcon_ws/install/turtlebot3_simulations:/home/leow/colcon_ws/install/py_pubsub:/home/leow/colcon_ws/install/map_loader:/home/leow/colcon_ws/install/auto_nav:/opt/ros/foxy /usr/bin/cmake --install /home/leow/colcon_ws/build/turtlebot3_simulations
+[0.064s] -- Install configuration: ""
+[0.064s] -- Execute custom install script
+[0.064s] -- Up-to-date symlink: /home/leow/colcon_ws/install/turtlebot3_simulations/share/ament_index/resource_index/package_run_dependencies/turtlebot3_simulations
+[0.064s] -- Up-to-date symlink: /home/leow/colcon_ws/install/turtlebot3_simulations/share/ament_index/resource_index/parent_prefix_path/turtlebot3_simulations
+[0.064s] -- Up-to-date symlink: /home/leow/colcon_ws/install/turtlebot3_simulations/share/turtlebot3_simulations/environment/ament_prefix_path.sh
+[0.064s] -- Up-to-date symlink: /home/leow/colcon_ws/install/turtlebot3_simulations/share/turtlebot3_simulations/environment/ament_prefix_path.dsv
+[0.065s] -- Up-to-date symlink: /home/leow/colcon_ws/install/turtlebot3_simulations/share/turtlebot3_simulations/environment/path.sh
+[0.065s] -- Up-to-date symlink: /home/leow/colcon_ws/install/turtlebot3_simulations/share/turtlebot3_simulations/environment/path.dsv
+[0.066s] -- Up-to-date symlink: /home/leow/colcon_ws/install/turtlebot3_simulations/share/turtlebot3_simulations/local_setup.bash
+[0.066s] -- Up-to-date symlink: /home/leow/colcon_ws/install/turtlebot3_simulations/share/turtlebot3_simulations/local_setup.sh
+[0.066s] -- Up-to-date symlink: /home/leow/colcon_ws/install/turtlebot3_simulations/share/turtlebot3_simulations/local_setup.zsh
+[0.066s] -- Up-to-date symlink: /home/leow/colcon_ws/install/turtlebot3_simulations/share/turtlebot3_simulations/local_setup.dsv
+[0.066s] -- Symlinking: /home/leow/colcon_ws/install/turtlebot3_simulations/share/turtlebot3_simulations/package.dsv
+[0.074s] -- Up-to-date symlink: /home/leow/colcon_ws/install/turtlebot3_simulations/share/ament_index/resource_index/packages/turtlebot3_simulations
+[0.074s] -- Up-to-date symlink: /home/leow/colcon_ws/install/turtlebot3_simulations/share/turtlebot3_simulations/cmake/turtlebot3_simulationsConfig.cmake
+[0.075s] -- Up-to-date symlink: /home/leow/colcon_ws/install/turtlebot3_simulations/share/turtlebot3_simulations/cmake/turtlebot3_simulationsConfig-version.cmake
+[0.075s] -- Up-to-date symlink: /home/leow/colcon_ws/install/turtlebot3_simulations/share/turtlebot3_simulations/package.xml
+[0.078s] Invoked command in '/home/leow/colcon_ws/build/turtlebot3_simulations' returned '0': CMAKE_PREFIX_PATH=/home/leow/colcon_ws/install/turtlebot3_gazebo:/home/leow/colcon_ws/install/turtlebot3_fake_node:/home/leow/colcon_ws/install/turtlebot3_simulations:/home/leow/colcon_ws/install/py_pubsub:/home/leow/colcon_ws/install/map_loader:/home/leow/colcon_ws/install/auto_nav:/opt/ros/foxy /usr/bin/cmake --install /home/leow/colcon_ws/build/turtlebot3_simulations

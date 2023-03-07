@@ -1,0 +1,32 @@
+[0.039s] Invoking command in '/home/leow/colcon_ws/build/turtlebot3_fake_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/leow/colcon_ws/install/py_pubsub:/home/leow/colcon_ws/install/map_loader:/home/leow/colcon_ws/install/auto_nav:/opt/ros/foxy /usr/bin/cmake --build /home/leow/colcon_ws/build/turtlebot3_fake_node -- -j20 -l20
+[0.321s] [100%] Built target turtlebot3_fake_node
+[0.455s] Invoked command in '/home/leow/colcon_ws/build/turtlebot3_fake_node' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/leow/colcon_ws/install/py_pubsub:/home/leow/colcon_ws/install/map_loader:/home/leow/colcon_ws/install/auto_nav:/opt/ros/foxy /usr/bin/cmake --build /home/leow/colcon_ws/build/turtlebot3_fake_node -- -j20 -l20
+[0.479s] Invoking command in '/home/leow/colcon_ws/build/turtlebot3_fake_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/leow/colcon_ws/install/py_pubsub:/home/leow/colcon_ws/install/map_loader:/home/leow/colcon_ws/install/auto_nav:/opt/ros/foxy /usr/bin/cmake --install /home/leow/colcon_ws/build/turtlebot3_fake_node
+[0.484s] -- Install configuration: ""
+[0.484s] -- Execute custom install script
+[0.484s] -- Up-to-date symlink: /home/leow/colcon_ws/install/turtlebot3_fake_node/lib/turtlebot3_fake_node/turtlebot3_fake_node
+[0.484s] -- Up-to-date symlink: /home/leow/colcon_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/launch/rviz2.launch.py
+[0.485s] -- Up-to-date symlink: /home/leow/colcon_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/launch/turtlebot3_fake_node.launch.py
+[0.485s] -- Up-to-date symlink: /home/leow/colcon_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/param/burger.yaml
+[0.485s] -- Up-to-date symlink: /home/leow/colcon_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/param/waffle.yaml
+[0.485s] -- Up-to-date symlink: /home/leow/colcon_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/param/waffle_pi.yaml
+[0.485s] -- Up-to-date symlink: /home/leow/colcon_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/rviz/model.rviz
+[0.485s] -- Up-to-date symlink: /home/leow/colcon_ws/install/turtlebot3_fake_node/include//turtlebot3_fake_node/turtlebot3_fake_node.hpp
+[0.485s] -- Up-to-date symlink: /home/leow/colcon_ws/install/turtlebot3_fake_node/share/ament_index/resource_index/package_run_dependencies/turtlebot3_fake_node
+[0.486s] -- Up-to-date symlink: /home/leow/colcon_ws/install/turtlebot3_fake_node/share/ament_index/resource_index/parent_prefix_path/turtlebot3_fake_node
+[0.486s] -- Up-to-date symlink: /home/leow/colcon_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/environment/ament_prefix_path.sh
+[0.486s] -- Up-to-date symlink: /home/leow/colcon_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/environment/ament_prefix_path.dsv
+[0.486s] -- Up-to-date symlink: /home/leow/colcon_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/environment/path.sh
+[0.486s] -- Up-to-date symlink: /home/leow/colcon_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/environment/path.dsv
+[0.486s] -- Up-to-date symlink: /home/leow/colcon_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/local_setup.bash
+[0.486s] -- Up-to-date symlink: /home/leow/colcon_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/local_setup.sh
+[0.487s] -- Up-to-date symlink: /home/leow/colcon_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/local_setup.zsh
+[0.487s] -- Up-to-date symlink: /home/leow/colcon_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/local_setup.dsv
+[0.487s] -- Symlinking: /home/leow/colcon_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/package.dsv
+[0.499s] -- Up-to-date symlink: /home/leow/colcon_ws/install/turtlebot3_fake_node/share/ament_index/resource_index/packages/turtlebot3_fake_node
+[0.501s] -- Up-to-date symlink: /home/leow/colcon_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.501s] -- Up-to-date symlink: /home/leow/colcon_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.501s] -- Up-to-date symlink: /home/leow/colcon_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/cmake/turtlebot3_fake_nodeConfig.cmake
+[0.502s] -- Up-to-date symlink: /home/leow/colcon_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/cmake/turtlebot3_fake_nodeConfig-version.cmake
+[0.503s] -- Up-to-date symlink: /home/leow/colcon_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/package.xml
+[0.509s] Invoked command in '/home/leow/colcon_ws/build/turtlebot3_fake_node' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/leow/colcon_ws/install/py_pubsub:/home/leow/colcon_ws/install/map_loader:/home/leow/colcon_ws/install/auto_nav:/opt/ros/foxy /usr/bin/cmake --install /home/leow/colcon_ws/build/turtlebot3_fake_node

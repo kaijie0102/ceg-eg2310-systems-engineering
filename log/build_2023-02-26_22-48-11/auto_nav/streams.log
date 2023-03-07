@@ -1,0 +1,23 @@
+[0.728s] Invoking command in '/home/leow/colcon_ws/build/auto_nav': PYTHONPATH=/home/leow/colcon_ws/build/auto_nav/prefix_override:/home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/leow/colcon_ws/build/auto_nav/build --no-deps install_data
+[0.863s] running develop
+[0.930s] running egg_info
+[0.930s] writing auto_nav.egg-info/PKG-INFO
+[0.930s] writing dependency_links to auto_nav.egg-info/dependency_links.txt
+[0.930s] writing entry points to auto_nav.egg-info/entry_points.txt
+[0.930s] writing requirements to auto_nav.egg-info/requires.txt
+[0.930s] writing top-level names to auto_nav.egg-info/top_level.txt
+[0.950s] reading manifest file 'auto_nav.egg-info/SOURCES.txt'
+[0.950s] writing manifest file 'auto_nav.egg-info/SOURCES.txt'
+[0.970s] running build_ext
+[0.970s] Creating /home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages/auto-nav.egg-link (link to .)
+[0.970s] Installing r2auto_nav script to /home/leow/colcon_ws/install/auto_nav/lib/auto_nav
+[0.970s] Installing r2mover script to /home/leow/colcon_ws/install/auto_nav/lib/auto_nav
+[0.971s] Installing r2moverotate script to /home/leow/colcon_ws/install/auto_nav/lib/auto_nav
+[0.971s] Installing r2occupancy script to /home/leow/colcon_ws/install/auto_nav/lib/auto_nav
+[0.971s] Installing r2occupancy2 script to /home/leow/colcon_ws/install/auto_nav/lib/auto_nav
+[0.971s] Installing r2scanner script to /home/leow/colcon_ws/install/auto_nav/lib/auto_nav
+[0.971s] Installing turtle_nav script to /home/leow/colcon_ws/install/auto_nav/lib/auto_nav
+[0.971s] 
+[0.971s] Installed /home/leow/colcon_ws/build/auto_nav
+[0.971s] running install_data
+[0.999s] Invoked command in '/home/leow/colcon_ws/build/auto_nav' returned '0': PYTHONPATH=/home/leow/colcon_ws/build/auto_nav/prefix_override:/home/leow/colcon_ws/install/auto_nav/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/leow/colcon_ws/build/auto_nav/build --no-deps install_data

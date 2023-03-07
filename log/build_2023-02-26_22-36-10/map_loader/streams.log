@@ -1,0 +1,17 @@
+[0.707s] Invoking command in '/home/leow/colcon_ws/build/map_loader': PYTHONPATH=/home/leow/colcon_ws/build/map_loader/prefix_override:/home/leow/colcon_ws/install/map_loader/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/leow/colcon_ws/build/map_loader/build --no-deps install_data
+[0.840s] running develop
+[0.913s] running egg_info
+[0.914s] writing map_loader.egg-info/PKG-INFO
+[0.914s] writing dependency_links to map_loader.egg-info/dependency_links.txt
+[0.914s] writing entry points to map_loader.egg-info/entry_points.txt
+[0.914s] writing requirements to map_loader.egg-info/requires.txt
+[0.914s] writing top-level names to map_loader.egg-info/top_level.txt
+[0.934s] reading manifest file 'map_loader.egg-info/SOURCES.txt'
+[0.934s] writing manifest file 'map_loader.egg-info/SOURCES.txt'
+[0.954s] running build_ext
+[0.954s] Creating /home/leow/colcon_ws/install/map_loader/lib/python3.8/site-packages/map-loader.egg-link (link to .)
+[0.954s] Installing load_map script to /home/leow/colcon_ws/install/map_loader/lib/map_loader
+[0.954s] 
+[0.954s] Installed /home/leow/colcon_ws/build/map_loader
+[0.955s] running install_data
+[0.982s] Invoked command in '/home/leow/colcon_ws/build/map_loader' returned '0': PYTHONPATH=/home/leow/colcon_ws/build/map_loader/prefix_override:/home/leow/colcon_ws/install/map_loader/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/leow/colcon_ws/build/map_loader/build --no-deps install_data

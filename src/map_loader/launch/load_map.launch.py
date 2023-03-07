@@ -37,11 +37,21 @@ def generate_launch_description():
             parameters=[{'use_sim_time': use_sim_time},
                         {'autostart': autostart},
                         {'node_names': lifecycle_nodes}])
+    
+    # rviz_cmd = launch_ros.actions.Node(
+    #         package='turtlebot3_cartographer',
+    #         namespace='',
+    #         executable='cartographer.launch.py',
+    #         name='rviz2',
+    #         parameters=[{'use_sim_time=True'}],
+    #         arguments=['-d' + os.path.join(get_package_share_directory('package_name'), 'config', 'config_file.rviz')]
+    #     )
 
 
 
 
     ld.add_action(map_server_cmd)
     ld.add_action(start_lifecycle_manager_cmd)
+    # ld.add_action(rviz_cmd)
 
     return ld
