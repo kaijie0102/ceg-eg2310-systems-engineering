@@ -9,8 +9,10 @@ This saves the map into the path defined <br>
 
 --LAUNCHING SAVED MAP-- <br>
 Configuration file for map can be found in src/map_loader/launch/load_map.launch.py <br>
-terminal 1: >grslam <br>
-terminal 2: >ros2 launch src/map_loader/launch/load_map.launch.py <br>
+terminal 1:
+>grslam <br>
+terminal 2: 
+>ros2 launch src/map_loader/launch/load_map.launch.py <br>
 
 --TROUBLESHOOTING-- <br>
 no map received: restart both apps <br>
