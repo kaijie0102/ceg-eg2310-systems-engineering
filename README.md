@@ -6,6 +6,7 @@ HOW TO GUIDE
 <p>
   
 - **No map received** - restart rslam and rosbu, make sure that you rosbu first then rslam
+- **Connection Refused** - check same hotspot(NOT the nus), restart hotspot
 
 </p>
 </details>
