@@ -1,58 +1,56 @@
 # turtlebot_ws
 
-<details><summary>Template</summary>
+HOW TO GUIDE
+
+<details><summary>Navigation</summary>
 <p>
+
+#### Getting data from /odom topic
+  
+```console
+   geometry_msgs.msg.Pose(position=geometry_msgs.msg.Point(x=-0.6580884139688824, y=-0.10369131549389796, z=0.0), orientation=geometry_msgs.msg.Quaternion(x=0.0, y=0.0, z=-0.7199514315963468, w=0.6940244492396294))
+```   
+  
+   Turning anti-clockwise: Orientation (Z) increase, Orientation (W) decrease
+   
+   Turning clockwise: Orientation (Z) decrease, Orientation (W) increase
 
 </p>
 </details>
 
-HOW TO GUIDE <br>
 <details><summary>Map</summary>
 <p>
 
-<details><summary>Saving map</summary>
-<p>
-Open rviz when robot is in either (a)gazebo or (b)physical environment and let the robot roam to explore the map <br>
-```python
-   ros2 run nav2_map_server map_saver_cli -f ~/colcon_ws/install/map_loader/share/map_loader/launch/<map>
-```
-This saves the map into the path defined <br>
-</p>
-</details>
+#### Saving map
 
-<details><summary>Launching saved map</summary>
-<p>
-Configuration file for map can be found in src/map_loader/launch/load_map.launch.py <br>
+Open rviz when robot is in either (a)gazebo or (b)physical environment and let the robot roam to explore the map
+
+To save the map into the path defined
+
+    ros2 run nav2_map_server map_saver_cli -f ~/colcon_ws/install/map_loader/share/map_loader/launch/<map>
+
+
+#### Loading saved map
+
+Configuration file for map can be found in src/map_loader/launch/load_map.launch.py
+   
 terminal 1:
-```console
-grslam
-```
+
+    grslam
+
 terminal 2:
-```console
-ros2 launch src/map_loader/launch/load_map.launch.py
-```
+
+    ros2 launch src/map_loader/launch/load_map.launch.py
+
 
 </p>
 </details>
 
+<details><summary>Troubleshooting</summary>
+<p>
+  
+- **No map received** - restart both apps
+
+
 </p>
 </details>
-
----------------MAP--------------- <br>
---SAVE MAP-- <br>
-Open rviz when robot is in either (a)gazebo or (b)physical environment and let the robot roam to explore the map <br>
->ros2 run nav2_map_server map_saver_cli -f ~/colcon_ws/install/map_loader/share/map_loader/launch/<map> <br>
-This saves the map into the path defined <br>
-
---LAUNCHING SAVED MAP-- <br>
-Configuration file for map can be found in src/map_loader/launch/load_map.launch.py <br>
-terminal 1:
->grslam 
-<br>
-terminal 2: <br>
->ros2 launch src/map_loader/launch/load_map.launch.py <br>
-
---TROUBLESHOOTING-- <br>
-no map received: restart both apps <br>
-
-
