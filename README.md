@@ -2,6 +2,12 @@
 
 HOW TO GUIDE
 
+<details><summary>Troubleshooting</summary>
+<p>
+  
+- **No map received** - restart rslam and rosbu, make sure that you rosbu first then rslam
+  
+
 <details><summary>Navigation</summary>
 <p>
 
@@ -46,10 +52,7 @@ terminal 2:
 </p>
 </details>
 
-<details><summary>Troubleshooting</summary>
-<p>
-  
-- **No map received** - restart both apps
+
 
 
 </p>
