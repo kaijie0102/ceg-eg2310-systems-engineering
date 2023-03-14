@@ -6,7 +6,9 @@ HOW TO GUIDE
 <p>
   
 - **No map received** - restart rslam and rosbu, make sure that you rosbu first then rslam
-  
+
+</p>
+</details>
 
 <details><summary>Navigation</summary>
 <p>
@@ -53,7 +55,3 @@ terminal 2:
 </details>
 
 
-
-
-</p>
-</details>
