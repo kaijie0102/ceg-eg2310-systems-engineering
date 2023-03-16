@@ -18,8 +18,10 @@ HOW TO GUIDE
 - **BUG: Expected value: Line 1 Col 1** - Make sure that the .json file has minimum {} in it
 
 Steps:
+  
+alias: setwp
 
-1) cw to enter root workspace
+1) cw to enter root workspace. ros2 run auto_nav setWaypoints
   
 2) Walk to waypoint
 
