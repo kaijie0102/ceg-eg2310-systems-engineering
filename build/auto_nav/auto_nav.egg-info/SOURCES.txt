@@ -17,6 +17,7 @@ auto_nav/r2moverotate.py
 auto_nav/r2occupancy.py
 auto_nav/r2occupancy2.py
 auto_nav/r2scanner.py
+auto_nav/setWaypoints.py
 auto_nav/setup.py
 auto_nav/turtle_nav.py
 auto_nav.egg-info/PKG-INFO
