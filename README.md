@@ -15,13 +15,15 @@ HOW TO GUIDE
 <details><summary>Setting waypoints</summary>
 <p>
   
-- **BUG: Expected value: Line 1 Col 1 - Make sure that the .json file has minimum {} in it
+- **BUG: Expected value: Line 1 Col 1** - Make sure that the .json file has minimum {} in it
 
 Steps:
 
-1) Walk to waypoint
+1) cw to enter root workspace
+  
+2) Walk to waypoint
 
-2) Press p. Select table number
+3) Press p. Select table number
 
 </p>
 </details>
