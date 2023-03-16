@@ -7,6 +7,21 @@ HOW TO GUIDE
   
 - **No map received** - restart rslam and rosbu, make sure that you rosbu first then rslam
 - **Connection Refused** - check same hotspot(NOT the nus), restart hotspot
+- **RSLAM not working well** - Re-rosbu
+
+</p>
+</details>
+
+<details><summary>Setting waypoints</summary>
+<p>
+  
+- **BUG: Expected value: Line 1 Col 1 - Make sure that the .json file has minimum {} in it
+
+Steps:
+
+1) Walk to waypoint
+
+2) Press p. Select table number
 
 </p>
 </details>
