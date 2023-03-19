@@ -1,13 +1,18 @@
 # turtlebot_ws
 
 HOW TO GUIDE
-
-<details><summary>Troubleshooting</summary>
+<details><summary>Controls</summary>
 <p>
-  
-- **No map received** - restart rslam and rosbu, make sure that you rosbu first then rslam
-- **Connection Refused** - check same hotspot(NOT the nus), restart hotspot
-- **RSLAM not working well** - Re-rosbu
+
+- **w/a/x/d/s** - forward/left/backward/right/stop (left and right turns indefinitely, use +/- integers to turn by specific values)
+
+- **p** - setting current coordinate as waypoint. Input table number to know which table this waypoint will lead to. See more at **Setting waypoints**
+
+- **negative integer** - turn right/CW by (-1 to -180deg)
+
+- **postive integer** - turn left/ACW by (1 to 180deg)
+
+
 
 </p>
 </details>
@@ -75,3 +80,12 @@ terminal 2:
 </details>
 
 
+<details><summary>Troubleshooting</summary>
+<p>
+  
+- **No map received** - restart rslam and rosbu, make sure that you rosbu first then rslam
+- **Connection Refused** - check same hotspot(NOT the nus), restart hotspot
+- **RSLAM not working well** - Re-rosbu
+
+</p>
+</details>
