@@ -14,7 +14,7 @@ def generate_launch_description():
     map_server_config_path = os.path.join(
         get_package_share_directory('map_loader'),
         'launch',
-        'map1.yaml'
+        'map3.yaml'
     )
 
     map_server_cmd = Node(

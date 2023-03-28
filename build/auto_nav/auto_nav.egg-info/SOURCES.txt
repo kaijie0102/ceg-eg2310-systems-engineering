@@ -9,6 +9,8 @@ setup.py
 ../../build/auto_nav/auto_nav.egg-info/top_level.txt
 ../../build/auto_nav/auto_nav.egg-info/zip-safe
 auto_nav/__init__.py
+auto_nav/archive_setWaypoints_map2base.py
+auto_nav/httpServer.py
 auto_nav/map2base.py
 auto_nav/r2LidarMotor.py
 auto_nav/r2auto_nav.py
@@ -17,7 +19,10 @@ auto_nav/r2moverotate.py
 auto_nav/r2occupancy.py
 auto_nav/r2occupancy2.py
 auto_nav/r2scanner.py
+auto_nav/setWaypoints.py
 auto_nav/setup.py
+auto_nav/setwp_map2base.py
+auto_nav/try.py
 auto_nav/turtle_nav.py
 auto_nav.egg-info/PKG-INFO
 auto_nav.egg-info/SOURCES.txt
