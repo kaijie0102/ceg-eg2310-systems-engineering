@@ -6,5 +6,5 @@ r2occupancy = auto_nav.r2occupancy:main
 r2occupancy2 = auto_nav.r2occupancy2:main
 r2scanner = auto_nav.r2scanner:main
 setWaypoints = auto_nav.setWaypoints:main
+setwp_map2base = auto_nav.setwp_map2base:main
 turtle_nav = auto_nav.turtle_nav:main
-
