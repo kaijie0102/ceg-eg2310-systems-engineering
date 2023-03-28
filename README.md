@@ -1,6 +1,26 @@
 # turtlebot_ws
 
 HOW TO GUIDE
+
+<details><summary>Tutorial</summary>
+<p>
+
+- Make sure laptop and pi both connected to same network(hotspot)
+
+- Open 1st Terminal: SSHRP -> ROSBU after the above is done
+
+- Open 2nd Terminal: RSLAM
+
+- Open 3rd Terminal: map2base
+
+- Open 4th Terminal: setwp
+
+
+
+</p>
+</details>
+
+
 <details><summary>Controls</summary>
 <p>
 
@@ -43,6 +63,8 @@ alias: setwp
 ```console
    geometry_msgs.msg.Pose(position=geometry_msgs.msg.Point(x=-0.6580884139688824, y=-0.10369131549389796, z=0.0), orientation=geometry_msgs.msg.Quaternion(x=0.0, y=0.0, z=-0.7199514315963468, w=0.6940244492396294))
 ```   
+
+   Original O(Z): 0  and O(W): 1
   
    Turning anti-clockwise: Orientation (Z) increase, Orientation (W) decrease
    
