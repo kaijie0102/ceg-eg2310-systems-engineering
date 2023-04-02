@@ -9,11 +9,14 @@ HOW TO GUIDE
 
 - Open 1st Terminal: SSHRP -> ROSBU after the above is done
 
-- Open 2nd Terminal: RSLAM
+- Open 2nd Terminal: 
+  rslam
 
-- Open 3rd Terminal: map2base
+- Open 3rd Terminal: 
+  map2base
 
-- Open 4th Terminal: setwp
+- Open 4th Terminal: 
+  setwp
 
 
 
