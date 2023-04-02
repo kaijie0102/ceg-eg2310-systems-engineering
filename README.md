@@ -11,11 +11,9 @@ HOW TO GUIDE
 
 - Open 2nd Terminal: ```rslam```
 
-- Open 3rd Terminal: 
-  map2base
+- Open 3rd Terminal: ```map2base```
 
-- Open 4th Terminal: 
-  setwp
+- Open 4th Terminal: ```setwp```
 
 
 
@@ -27,9 +25,9 @@ HOW TO GUIDE
 
 - Make sure laptop, esp32 and pi both connected to same network(hotspot)
 
-- 192.168.109.32:8000 confirm IP address
+- ```192.168.109.32:8000``` confirm IP address
 
-- to test POST: on terminal: ```curl -X POST http://localhost:8000 -d 2``` (http not https)
+- to test server connection: local terminal: ```curl -X POST http://localhost:8000 -d 2``` (http not https)
 
 
 </p>
@@ -54,11 +52,11 @@ HOW TO GUIDE
 <details><summary>Setting waypoints</summary>
 <p>
   
-- **BUG: Expected value: Line 1 Col 1** - Make sure that the .json file has minimum {} in it
+- ```BUG: Expected value: Line 1 Col 1``` - Make sure that the .json file has minimum {} in it
 
 Steps:
   
-alias: setwp
+alias: ```setwp```
 
 1) cw to enter root workspace. ros2 run auto_nav setWaypoints
   
@@ -96,20 +94,16 @@ Open rviz when robot is in either (a)gazebo or (b)physical environment and let t
 
 To save the map into the path defined
 
-    ros2 run nav2_map_server map_saver_cli -f ~/colcon_ws/install/map_loader/share/map_loader/launch/<map>
+    ```ros2 run nav2_map_server map_saver_cli -f ~/colcon_ws/install/map_loader/share/map_loader/launch/<map>```
 
 
 #### Loading saved map
 
 Configuration file for map can be found in src/map_loader/launch/load_map.launch.py
    
-terminal 1:
+terminal 1: ```grslam```
 
-    grslam
-
-terminal 2:
-
-    ros2 launch src/map_loader/launch/load_map.launch.py
+terminal 2: ```ros2 launch src/map_loader/launch/load_map.launch.py```
 
 
 </p>
