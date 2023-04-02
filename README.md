@@ -9,8 +9,7 @@ HOW TO GUIDE
 
 - Open 1st Terminal: SSHRP -> ROSBU after the above is done
 
-- Open 2nd Terminal: 
-  rslam
+- Open 2nd Terminal: ```rslam```
 
 - Open 3rd Terminal: 
   map2base
