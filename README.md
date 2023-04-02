@@ -117,5 +117,7 @@ terminal 2: ```ros2 launch src/map_loader/launch/load_map.launch.py```
 - **Connection Refused** - check same hotspot(NOT the nus), restart hotspot
 - **RSLAM not working well** - Re-rosbu
 
+```/opt/ros/foxy/share/turtlebot3_cartographer/config``` : set use_odom to False
+
 </p>
 </details>
