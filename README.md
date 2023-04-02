@@ -22,6 +22,18 @@ HOW TO GUIDE
 </p>
 </details>
 
+<details><summary>HTTP server</summary>
+<p>
+
+- Make sure laptop, esp32 and pi both connected to same network(hotspot)
+
+- 192.168.109.32:8000 confirm IP address
+
+- to test POST: on terminal: ```curl -X POST http://localhost:8000 -d 2``` (http not https)
+
+
+</p>
+</details>
 
 <details><summary>Controls</summary>
 <p>
