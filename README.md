@@ -15,6 +15,8 @@ HOW TO GUIDE
 
 - Open 4th Terminal: ```setwp```
 
+- Open 5th Terminal: ```python3 httpServer.py```
+
 
 
 </p>
