@@ -1,5 +1,6 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import logging
+import json
 
 class S(BaseHTTPRequestHandler):
     def _set_response(self):
@@ -17,6 +18,16 @@ class S(BaseHTTPRequestHandler):
         post_data = self.rfile.read(content_length) # <--- Gets the data itself
         logging.info("POST request,\nPath: %s\nHeaders:\n%s\n\nBody:\n%s\n",
                 str(self.path), str(self.headers), post_data.decode('utf-8'))
+        
+        post_file = "serverData.json"
+        f = open(post_file, 'r+') 
+        existing_data = json.load(f)
+
+        existing_data["postD"].append(post_data.decode('utf-8'))
+        f.seek(0)
+        json.dump(existing_data, f, indent=4)
+        f.close()
+
 
         self._set_response()
         self.wfile.write("POST request for {}\n".format(self.path).encode('utf-8'))
