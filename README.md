@@ -4,6 +4,8 @@ Semester long project to create a dispenser to dispense a can drink onto a turtl
 
 <details><summary>Tutorial</summary>
 <p>
+  
+  * see alias for full command
 
 - Make sure laptop and pi both connected to same network(hotspot)
 
@@ -21,6 +23,21 @@ Semester long project to create a dispenser to dispense a can drink onto a turtl
 
 
 
+</p>
+</details>
+
+<details><summary>Aliases</summary>
+<p>
+
+  ```
+  alias rslam='ros2 launch turtlebot3_cartographer cartographer.launch.py'
+  
+  alias setwp='autonav && python3 setwp_map2base.py'
+  
+  alias map2base="autonav && python3 map2base.py"
+  
+  ```
+  
 </p>
 </details>
 
