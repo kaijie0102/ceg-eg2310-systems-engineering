@@ -1,9 +1,5 @@
 # turtlebot_ws
 
-HOW TO GUIDE
-
-What is this? 
-
 Semester long project to create a dispenser to dispense a can drink onto a turtlebot, which will autonomously navigate to a set location.
 
 <details><summary>Tutorial</summary>
