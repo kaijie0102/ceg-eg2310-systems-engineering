@@ -2,20 +2,26 @@
 
 HOW TO GUIDE
 
+What is this? 
+
+Semester long project to create a dispenser to dispense a can drink onto a turtlebot, which will autonomously navigate to a set location.
+
 <details><summary>Tutorial</summary>
 <p>
 
 - Make sure laptop and pi both connected to same network(hotspot)
 
-- Open 1st Terminal: SSHRP -> ROSBU after the above is done
+- Open 1st Terminal: ```sshrp``` -> ```rosbu``` after the above is done => To start ros on pi
 
-- Open 2nd Terminal: ```rslam```
+- Open 2nd Terminal: ```rslam``` => take in lidar data and create a map on rviz
 
-- Open 3rd Terminal: ```map2base```
+- Open 3rd Terminal: ```map2base``` => publishes the coordinates of the robot in the map. Map's origin is where ```rslam``` is called
 
-- Open 4th Terminal: ```setwp```
+- Open 4th Terminal: ```setwp``` => main script for autonavigation
 
-- Open 5th Terminal: ```python3 httpServer.py```
+- Open 5th Terminal: ```python3 httpServer.py``` => starts http server, awaits input from keypad connected to the ESP32
+
+- Open 6th Terminal: ```sshrp``` -> ```switch``` => publishes the state of the microswitch, whether there is a "can" or not
 
 
 
