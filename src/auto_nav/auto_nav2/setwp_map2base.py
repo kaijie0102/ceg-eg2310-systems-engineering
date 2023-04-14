@@ -31,10 +31,11 @@ from httpServer import S
 from sensor_msgs.msg import LaserScan
 import time
 import os
+from std_msgs.msg import Bool
 
 # constants
-rotatechange = 0.3
-speedchange = 0.15
+rotatechange = 0.45
+speedchange = 0.2
 PI = 3.141592653589793
 
 
@@ -87,6 +88,13 @@ class Waypoint(Node):
         # self.occ_subscription  # prevent unused variable warning
         self.occdata = np.array([])
 
+        self.switch_subscription = self.create_subscription(
+            Bool,
+            'limit_switch',
+            self.switch_callback,
+            qos_profile_sensor_data)
+        self.switch_subscription  # prevent unused variable warning
+
         self.scan_subscription = self.create_subscription(
             LaserScan,
             'scan',
@@ -109,41 +117,58 @@ class Waypoint(Node):
 
         self.obstacle = False
         self.rotate_stuck = False
-        # self.special_table = False
+        self.special_table = False
         self.docked = True
         # self.special_found = False
-        self.og_left_laser = 2.1 # og - left < 400
+        self.og_left_laser = 2.2 # og - left < 400
         self.left_laser = 0
+        self.switch=False
+        self.slow = False
+        self.laser_range=0
+        self.slow_rotate=False
+        self.p_dock=False
+
         # self.only_for_special = False
+
+    def switch_callback(self, msg):
+        self.switch = msg.data
+        # self.get_logger().info("switch callback")
+        # print("swtich callback", msg.data)
 
     def scan_callback(self, msg):
         # self.get_logger().info('in scan callback')
         # stop whenever the distance is below threshold
         # create numpy array
-        laser_range = np.array(msg.ranges)
+        self.laser_range = np.array(msg.ranges)
         # replace 0's with nan
-        laser_range[laser_range==0] = np.nan
+        self.laser_range[self.laser_range==0] = np.nan
+
         # find index with minimum value
-        lr2i = np.nanargmin(laser_range)
+        lr2i = np.nanargmin(self.laser_range)
         # log the info
         # twist = Twist()
 
-        self.left_laser = laser_range[90]
+        self.left_laser = self.laser_range[90]
 
         # if (self.og_left_laser!=-1):
-        #     self.get_logger().info('difference is: %f'%self.og_left_laser-laser_range[90])
+        #     self.get_logger().info('difference is: %f'%self.og_left_laser-self.laser_range[90])
         
         # if (self.only_for_special):
         #     self.get_logger().info("Difference...%f"%(self.og_left_laser - self.left_laser))
         #     if (s):
         #         self.get_logger().info("Special is found!")
         #         self.special_found=True
+        if (self.special_table):
+            if ( self.laser_range[0]<0.2 or self.laser_range[1]<0.2 or self.laser_range[359]<0.2 or self.laser_range[358]<0.2 or self.laser_range[5]<0.2 or self.laser_range[10]<0.2 or self.laser_range[355]<0.2 or self.laser_range[350]<0.2 or self.laser_range[270]<0.2 or self.laser_range[280]<0.2 or self.laser_range[290]<0.2 or self.laser_range[30]<0.2 or self.laser_range[20]<0.2 or self.laser_range[10]<0.2):
+                self.get_logger().info('SPECIAL STOP!!')
+                self.obstacle=True
+                self.stop()
 
         # if the front of robot senses something in front, stop
-        # self.get_logger().info('Dock: %d, Range at [0]: %f, [1]: %f, [359]: %f, [358]: %f' % (self.docked,laser_range[0],laser_range[1],laser_range[358],laser_range[359]))
-        if (laser_range[0]<0.2 or laser_range[1]<0.2 or laser_range[359]<0.2 or laser_range[358]<0.2):
+        # self.get_logger().info('Dock: %d, Range at [0]: %f, [1]: %f, [359]: %f, [358]: %f' % (self.docked,self.laser_range[0],self.laser_range[1],self.laser_range[358],self.laser_range[359]))
+        if (self.laser_range[0]<0.21 or self.laser_range[1]<0.210 or self.laser_range[359]<0.210 or self.laser_range[358]<0.210):
             if (not self.docked):
-                # self.get_logger().info('STOP!!!!!!!!!! SELF>OBSTACLE TRUE!')
+                self.get_logger().info('STOP!!')
                 self.obstacle=True
                 self.stop()
 
@@ -211,12 +236,20 @@ class Waypoint(Node):
             elif new[0] < curr[0] and new[1] < curr[1]:
                 return 4
 
+    # movee
     def move_to_point(self, curr, new):
         twist = Twist()
         current_yaw = math.degrees(self.yaw)
         norm = distance.euclidean(curr, new)
         self.get_logger().info("Norm is: %f" % (norm))
         target_angle = abs(np.arctan((new[1] - curr[1]) / (new[0] - curr[0])))
+
+        # if(abs(final_angle)>50 and abs(final_angle)<100):
+            # try again if angle is off
+            # target_angle = abs(np.arctan((new[1] - curr[1]) / (new[0] - curr[0])))
+            # print(final_angle)
+            # self.backward_slow()
+            # time.sleep(1)
         # converting from radian to degree
         target_angle = target_angle * 180 / PI
 
@@ -241,6 +274,7 @@ class Waypoint(Node):
         if final_angle > 180 or final_angle < -180:  # to avoid turning the long
             final_angle = final_angle - 360
 
+        
         self.rotatebot(final_angle)
         while (self.rotate_stuck==True):
             self.rotatebot(40)
@@ -254,11 +288,24 @@ class Waypoint(Node):
 
         
         # walk to destination
+        if self.obstacle:
+            return
         self.obstacle=False
-        if norm>0.5:
+
+        norm = distance.euclidean(curr, new)
+        if norm>0.7:
+            self.slow=False
+        else:
+            self.slow=True
+
+        # moving forward
+        print(self.slow)
+        if not self.slow:
             self.forward()
         else:
             self.forward_slow()
+            self.slow = True
+
         prev_norm = 999
         recalib_counter=0 
 
@@ -281,9 +328,12 @@ class Waypoint(Node):
                 break
             
             recalib_counter+=1   
-            if recalib_counter>30 and norm > 0.5 and not self.obstacle:
+            norm = distance.euclidean(curr, new)
+            if recalib_counter>50 and norm > 0.4 and not self.obstacle:
                 self.get_logger().info("recalib, continue walking to x:%f y:%f"%(new[0],new[1]))
+                self.stop()
                 self.move_to_point(curr,new)
+                # return
     
         # self.get_logger().info("norm-prev_norm: %d, self.obstacle %d"%(norm-prev_norm, self.obstacle))
         norm = distance.euclidean(curr, new)
@@ -291,6 +341,7 @@ class Waypoint(Node):
         if (norm > 0.08 and not self.obstacle):
             self.get_logger().info("norm:%f is too far!, continue walking to x:%f y:%f"%(norm,new[0],new[1]))
             curr = (self.x_coord, self.y_coord)
+            self.stop()
             self.move_to_point(curr,new)
 
         # elif(norm>0.5 and self.obstacle):
@@ -298,15 +349,20 @@ class Waypoint(Node):
 
         current_yaw = math.degrees(self.yaw)
         self.get_logger().info("MOVEMENT ENDS!")
+        # self.movement_end=True
         # stop the bot after it has finished walking
         self.stop()
         # self.recallibrate = False
 
+############################# 
+##### auto navigate ########
+#############################
     def auto_navigate(self):
         post_file = "serverData.json"
         file_size = os.stat(post_file).st_size
         while True:
-
+            self.p_dock=False
+            self.slow = False
             self.get_logger().info("Please input table number into keypad: ")
             # getting table number by checking if there is a new entry in serverData.json
             while True: 
@@ -319,6 +375,16 @@ class Waypoint(Node):
 
                     # if there is new entry, break out of the while loop
                     break
+
+            # UNCOMMENT!
+            
+            
+            while (not self.switch):
+                # print(self.laser_range[0])
+                rclpy.spin_once(self)
+
+            
+            self.get_logger().info("Can detected!")
             
             # open file and read the latest value
             f = open(post_file, 'r') 
@@ -382,7 +448,21 @@ class Waypoint(Node):
                         self.move_to_point(curr,new)
 
             self.get_logger().info("Reached the point %f, %f"%(new[0],new[1]))
-            time.sleep(5)
+
+            # Waiting for can to be lifted after reaching table
+            while (self.switch and target_table!="6"):
+                rclpy.spin_once(self)
+            time.sleep(3)
+
+            self.get_logger().info("Can lifted!")
+
+            # reached the table but relying on the lidar stop
+            if (self.obstacle):
+                self.handle_obstacle()
+
+            if (target_table=="5"):
+                # if target table is 5 go back to waypoint 1 of table 5 first before docking
+                self.handle_return(target_table)
 
             # if special table 6 is called
             if target_table=="6":
@@ -393,14 +473,21 @@ class Waypoint(Node):
                 # after reaching entrance of table 6
                 rclpy.spin_once(self)
 
+            # # when microswitch detect can has been lifted, dock. Dock.
+            if (self.obstacle):
+                self.handle_obstacle()
+            self.get_logger().info("Proceeding to dockk!")
+
             # walking back to dispenser
             dock_waypoints = existing_waypoints["0"]
             dock_count = 1
 
-            # # when microswitch detect can has been lifted, dock. Dock.
-            self.get_logger().info("Proceeding to dock!")
-
             for item in dock_waypoints:
+
+                # obtaining new set of way point
+                if (self.obstacle):
+                    self.handle_obstacle()
+
                 # visiting every waypoint
                 curr = (self.x_coord, self.y_coord)
                 self.get_logger().info("curr x: %f curr y: %f" %
@@ -424,19 +511,58 @@ class Waypoint(Node):
                         new = tuple(new)
                         self.move_to_point(curr,new)
 
+            # check distance to wall
+            self.precise_dock()
+
             self.get_logger().info('Face front and then Walking straight to dispenser...:%f ' % (current_yaw))
-            self.face_front() 
-            self.obstacle=False
-            self.forward_slow()
+            if (not self.obstacle):
+                self.face_front() 
+                self.forward_v_slow()
+                # print("move forward slowllllly")
+                time.sleep(1)
+                print("facing front man")
+                self.face_front() 
+                # time.sleep(0)
+                self.obstacle=False
+                self.forward_v_slow()
+                # self.obstacle=False
+                # self.dock=True
+                # self.obstacle=True
+
             # for i in range(10):
             #     rclpy.spin_once(self)
             
+    def precise_dock(self):
+        self.face_front()
+        self.rotatebot(-90)
+        self.p_dock=True
         
+        self.stop()
+        while (self.laser_range[0]<0.514 or self.laser_range[0]>0.518):
+            print(self.laser_range[0])
+            if (self.laser_range[0]<0.516):
+                twist = Twist()
+                twist.linear.x = -0.05
+                twist.angular.z = 0.0
+                self.publisher_.publish(twist)
+            else:
+                twist = Twist()
+                twist.linear.x = 0.05
+                twist.angular.z = 0.0
+                self.publisher_.publish(twist)
+            
+            rclpy.spin_once(self)
+            # time.sleep(0.1)
+            # self.stop()
+        self.stop()
+
+
+
     
 
     # function to rotate the TurtleBot
     def rotatebot(self, rot_angle):
-        # self.get_logger().info('In rotatebot')
+        # self.get_logger().info('rot_angle: %d'% rot_angle)
         # create Twist object
         twist = Twist()
 
@@ -461,7 +587,10 @@ class Waypoint(Node):
         # set linear speed to zero so the TurtleBot rotates on the spot
         twist.linear.x = 0.0
         # set the direction to rotate
-        twist.angular.z = c_change_dir * speedchange
+        if (abs(rot_angle)<10 or self.p_dock):
+            twist.angular.z = c_change_dir * (rotatechange/4)
+        else:
+            twist.angular.z = c_change_dir * rotatechange
         # start rotation
         self.publisher_.publish(twist)
 
@@ -472,6 +601,8 @@ class Waypoint(Node):
         # becomes -1.0, and vice versa
         stuck_count = 0
         while (c_change_dir * c_dir_diff > 0):
+            if (self.obstacle):
+                return
             stuck_count+=1
             # if (stuck_count%10==0):
             #     self.get_logger().info("stuck count: %d" % stuck_count)
@@ -500,40 +631,14 @@ class Waypoint(Node):
         twist.angular.z = 0.0
         # stop the rotation
         self.publisher_.publish(twist)
-    
-    def handle_special(self):
-        # detection of special table
-        self.get_logger().info('Starting detection of special table')
-        self.get_logger().info('DIFF: %f' %(self.og_left_laser - self.left_laser))
-        self.forward_slow()
-        while (self.og_left_laser - self.left_laser<0.4):
-            self.get_logger().info('DIFF: %f' %(self.og_left_laser - self.left_laser))
-            # self.get_logger().info()
-            self.get_logger().info("Checking on left....%f"%self.left_laser)  
-            rclpy.spin_once(self)
-        self.get_logger().info('DIFF FINISH: %f' %(self.og_left_laser - self.left_laser))
-        for i in range(10):
-            pass
 
-        self.get_logger().info('Located special table!')
-        self.stop()
-        self.rotatebot(90)
-        self.forward_slow()
-        # forward until it is stopped by laser callback
-        while not self.obstacle:
-            rclpy.spin_once(self)
-
-        self.docked=True
-        self.get_logger().info('Reached special table!')
-        # go back to base by reverse waypoints
-        self.backward()
-        self.face_back()
-        self.docked=False
-        self.obstacle = False
+    def handle_return(self,table):
+        # backtracking for specific table 
+        table = table+"r"
         wp_file = "waypoints.json"
         f = open(wp_file, 'r+')
         existing_waypoints = json.load(f)
-        target_waypoints = existing_waypoints["6r"] # table 6 return journey
+        target_waypoints = existing_waypoints[table] # tablereturn journey
 
         count = 1
         for item in target_waypoints:
@@ -560,6 +665,83 @@ class Waypoint(Node):
                     self.move_to_point(curr,new)
         
 
+    def handle_special(self):
+        # detection of special table
+        self.get_logger().info('Starting detection of special table')
+        # self.get_logger().info('DIFF: %f' %(self.og_left_laser - self.left_laser))
+        self.forward_slow()
+        while (self.og_left_laser - self.left_laser<0.5):
+            self.get_logger().info('DIFF: %f' %(self.og_left_laser - self.left_laser))
+            # self.get_logger().info()
+            # self.get_logger().info("Checking on left....%f"%self.left_laser)  
+            rclpy.spin_once(self)
+        self.get_logger().info('DIFF FINISH: %f' %(self.og_left_laser - self.left_laser))
+        time.sleep(0.5)
+
+        self.get_logger().info('Located special table!')
+        self.stop()
+        self.rotatebot(90)
+        self.special_table=True
+        curr = (self.x_coord, self.y_coord)
+        new = (self.x_coord-0.1, self.y_coord-1.8)
+        self.get_logger().info("walking from: (%f,%f) to (%f,%f)" %
+                                    (curr[0], curr[1],new[0],new[1]))
+        self.slow=False
+        self.move_to_point(curr,new)
+        self.slow=False
+
+        # self.forward()
+        # forward until it is stopped by laser callback
+        # while not self.obstacle:
+        #     rclpy.spin_once(self)
+
+        self.docked=True
+        self.get_logger().info('Reached special table!')
+
+        while (self.switch):
+            rclpy.spin_once(self)
+        self.get_logger().info("Can lifted!")
+        time.sleep(3)
+
+        # go back to base by reverse waypoints
+        self.special_table=False
+        if self.obstacle:
+            self.handle_obstacle()
+        # self.obstacle=False
+        # self.backward()
+        # self.face_back()
+        # self.docked=False
+        # self.obstacle = False
+        wp_file = "waypoints.json"
+        f = open(wp_file, 'r+')
+        existing_waypoints = json.load(f)
+        target_waypoints = existing_waypoints["6r"] # table 6 return journey
+
+        count = 1
+        for item in target_waypoints:
+            # visiting every waypoint
+            curr = (self.x_coord, self.y_coord)
+            self.get_logger().info("curr x: %f curr y: %f" %
+                                (curr[0], curr[1]))
+            # curr_x = self.x_coord
+            # curr_y = self.y_coord
+            new = [0, 0]
+            for i in item.values():
+                # storing new x and y to travel to
+                # obtaining x firstprec
+                if (count == 1):
+                    count += 1
+                    new[0] = i
+                    self.get_logger().info("Obtaining new x: %f" % (new[0]))
+                else:
+                    # after both x and y coordinate is obtained
+                    count -= 1
+                    new[1] = i
+                    self.get_logger().info("Obtaining new y: %f." % (new[1]))
+                    new = tuple(new)
+                    self.move_to_point(curr,new)
+        
+
 
     def face_front(self):
         current_yaw = math.degrees(self.yaw)
@@ -573,6 +755,14 @@ class Waypoint(Node):
             self.rotatebot(180-current_yaw)
             current_yaw = math.degrees(self.yaw)
 
+    def handle_obstacle(self):
+        self.obstacle = False
+        self.docked=True # so that the bot doesn't trigger the self.obstacle again
+        self.backward()
+        self.face_front()
+        # time.sleep(3)
+        self.docked = False # after sucessfully leaving 
+        self.obstacle = False
 
 # function to read keyboard input
     def readKey(self):
@@ -654,14 +844,24 @@ class Waypoint(Node):
 
     def backward(self):
         twist = Twist()
-        twist.linear.x -= speedchange
+        twist.linear.x -= (speedchange-0.05)
         twist.angular.z = 0.0
         self.publisher_.publish(twist)
         time.sleep(1)
         self.stop()
     def forward_slow(self):
         twist = Twist()
+        twist.linear.x += 0.1
+        twist.angular.z = 0.0
+        self.publisher_.publish(twist)
+    def forward_v_slow(self):
+        twist = Twist()
         twist.linear.x += 0.05
+        twist.angular.z = 0.0
+        self.publisher_.publish(twist)
+    def backward_slow(self):
+        twist = Twist()
+        twist.linear.x -= 0.1
         twist.angular.z = 0.0
         self.publisher_.publish(twist)
 
